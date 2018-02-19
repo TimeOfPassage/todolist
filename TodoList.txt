@@ -1,0 +1,90 @@
+TodoList应用：
+	
+	拆分组件：
+	App:
+		state: todos [
+				{
+					isChecked:false,
+					content:'吃饭'
+				},
+				{
+					isChecked:true,
+					content:'<del>睡觉</del>'
+				}]
+
+	TodoList:
+		props: todos/array
+	TodoItem:
+		props: todo/object
+	TodoFooter:
+
+
+	静态页面实现
+
+	动态实现
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h1 style="margin-bottom: 20px;">
+                    <center>
+                      TodoList App Demo
+                    </center>
+                </h1>
+                <input type="text" class="form-control" placeholder="回车完成输入"/>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="input-group col-md-12">
+                        <div class="col-md-6">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="option1"> 吃饭
+                          </label>
+                        </div>
+                        <div class="col-md-2 col-md-offset-4">
+                          <a href="#" class="btn btn-danger btn-xs">删除</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="input-group col-md-12">
+                        <div class="col-md-6">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="option1"> 吃饭
+                          </label>
+                        </div>
+                        <div class="col-md-2 col-md-offset-4">
+                          <a href="#" style="display: none;" class="btn btn-danger btn-xs">删除</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="input-group col-md-12">
+                        <div class="col-md-6">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" checked> <del>吃饭</del>
+                          </label>
+                        </div>
+                        <div class="col-md-2 col-md-offset-4">
+                          <a href="#" class="btn btn-danger btn-xs">删除</a>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel-footer">
+              <div class="input-group col-md-12">
+                <div class="col-md-6">
+                  <label class="checkbox-inline">
+                    <input type="checkbox"> 全选
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  已完成 1 个任务 ／ 共 5 个任务
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
